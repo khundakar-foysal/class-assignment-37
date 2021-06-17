@@ -1,0 +1,45 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?5d26ae649125213d3a09cf5dc5c83cf8") format("truetype"),
+url("./flaticon.woff?5d26ae649125213d3a09cf5dc5c83cf8") format("woff"),
+url("./flaticon.woff2?5d26ae649125213d3a09cf5dc5c83cf8") format("woff2"),
+url("./flaticon.eot?5d26ae649125213d3a09cf5dc5c83cf8#iefix") format("embedded-opentype"),
+url("./flaticon.svg?5d26ae649125213d3a09cf5dc5c83cf8#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "chain": "\f101",
+    "streaming": "\f102",
+    "camera-stand": "\f103",
+    "microscope": "\f104",
+    "play-button": "\f105",
+);
+
+.flaticon-chain:before {
+    content: map-get($flaticon-map, "chain");
+}
+.flaticon-streaming:before {
+    content: map-get($flaticon-map, "streaming");
+}
+.flaticon-camera-stand:before {
+    content: map-get($flaticon-map, "camera-stand");
+}
+.flaticon-microscope:before {
+    content: map-get($flaticon-map, "microscope");
+}
+.flaticon-play-button:before {
+    content: map-get($flaticon-map, "play-button");
+}
